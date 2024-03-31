@@ -115,6 +115,7 @@ function CartForm($, $cartForm) {
 
           $ov.prop('checked', false)
           $ov.prop('disabled', !availableOptionValueIds.includes(id))
+
         })
     })
   }
@@ -200,7 +201,7 @@ function CartForm($, $cartForm) {
         return ov.id.toString()
       })
 
-      return self.areArraysEqual(optionValueIds, self.selectedOptionValueIds)
+      return self.areArraysEqual(optionValueIds, self.availableOptionValueIds())
     })
   }
 
